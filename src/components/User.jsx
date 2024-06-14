@@ -74,7 +74,7 @@ function User() {
                                 <li><Link to='/home'><HomeIcon/>Home</Link></li>
                                 <li><Link to='/dashboard'><DashboardCustomizeRoundedIcon />Dashboard</Link></li>
                                 <li><Link to='/post'><LibraryAddRoundedIcon />Post</Link></li>
-                                <li><Link to='/users'><i className="fa-solid fa-users"></i></Link></li>
+                                <li><Link to='/users'><i className="fa-solid fa-users"></i>Users</Link></li>
                                 <li><Link to='/blogs'><TravelExploreRoundedIcon />Blogs</Link></li>
                             </ul>
                         </div>

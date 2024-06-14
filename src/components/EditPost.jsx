@@ -140,7 +140,7 @@ function EditPost() {
                 </nav>
 
                 <section className="w-full h-[90%] bg-white flex flex-col items-center justify-center max-sm:pl-5">
-                    <h1 className="font-bold text-2xl text-black text-center pt-10 mr-8">Create a Post</h1>
+                    <h1 className="font-bold text-2xl text-black text-center pt-10 mr-8">Update your Post</h1>
                     <form className="w-[30%] h-full flex flex-col max-lg:w-[50%] max-md:w-[60%] max-sm:w-[85%]"
                         encType="multipart/form-data"
                         onSubmit={handleUpdate}>
