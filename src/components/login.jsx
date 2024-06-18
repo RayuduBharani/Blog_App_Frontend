@@ -23,7 +23,7 @@ function Login() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        fetch("https://blog-app-backend-cbu1.onrender.com/login", {
+        fetch("https://blog-backend-vert.vercel.app/login", {
             method: "POST",
             body: JSON.stringify(loginData),
             headers: {

@@ -21,7 +21,7 @@ function Register() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        fetch("https://blog-app-backend-cbu1.onrender.com/register", {
+        fetch("https://blog-backend-vert.vercel.app/register", {
             method: 'POST',
             body: JSON.stringify(registerData),
             headers: {

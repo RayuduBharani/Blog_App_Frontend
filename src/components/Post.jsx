@@ -57,7 +57,7 @@ function Post() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        fetch("https://blog-app-backend-cbu1.onrender.com/post", {
+        fetch("https://blog-backend-vert.vercel.app/post", {
             method: "POST",
             body: JSON.stringify(post),
             headers: {

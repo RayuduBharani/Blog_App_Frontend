@@ -19,7 +19,7 @@ function Blog() {
 
     async function fetchBlogs() {
         try {
-            const response = await fetch("https://blog-app-backend-cbu1.onrender.com/allblogs", {
+            const response = await fetch("https://blog-backend-vert.vercel.app/allblogs", {
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${blogs.user.token}`
