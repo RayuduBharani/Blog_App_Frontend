@@ -23,7 +23,7 @@ function User() {
     }
 
     useEffect(() => {
-        fetch("https://blog-app-backend-cbu1.onrender.com/users", {
+        fetch("https://blog-backend-vert.vercel.app/users", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${UserData.user.token}`
@@ -45,7 +45,7 @@ function User() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        fetch(`https://blog-app-backend-cbu1.onrender.com/userSearch/${searchUser}`, {
+        fetch(`https://blog-backend-vert.vercel.app/userSearch/${searchUser}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${UserData.user.token}`
@@ -71,7 +71,7 @@ function User() {
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                             </div>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52">
-                                <li><Link to='/home'><HomeIcon/>Home</Link></li>
+                                <li><Link to='/home'><HomeIcon />Home</Link></li>
                                 <li><Link to='/dashboard'><DashboardCustomizeRoundedIcon />Dashboard</Link></li>
                                 <li><Link to='/post'><LibraryAddRoundedIcon />Post</Link></li>
                                 <li><Link to='/users'><i className="fa-solid fa-users"></i>Users</Link></li>
@@ -134,28 +134,28 @@ function User() {
                                         </div>
                                     ))
                                 ) :
-                                (<div className='font-bold animate-pulse text-xl'>
-                                    User Not Found
-                                </div>)
+                                    (<div className='font-bold animate-pulse text-xl'>
+                                        User Not Found
+                                    </div>)
                             ) :
-                            (
-                                users.map((user, index) => (
-                                    <div key={index} className='w-fit h-fit flex rounded-lg overflow-hidden p-3 shadow-lg bg-neutral-200 max-sm:inline-block max-sm:w-[100%]'>
-                                        <div className='w-12 h-10 rounded-full overflow-hidden mt-2 flex'>
-                                            <img className='w-full h-full' src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png" alt="Author avatar" />
-                                        </div>
-                                        <Link to={`/user/post/${user._id}`}>
-                                            <div className='ml-5 max-sm:ml-0'>
-                                                <p className='font-bold text-black'>{user.name}</p>
-                                                <p className='font-semibold'>{user.email}</p>
-                                                {/* <button className="w-full px-3 mt-3 py-1.5 w-20 pl-4 hover:bg-blue-500 bg-blue-600 border-2 rounded-lg text-white border-none">
+                                (
+                                    users.map((user, index) => (
+                                        <div key={index} className='w-fit h-fit flex rounded-lg overflow-hidden p-3 shadow-lg bg-neutral-200 max-sm:inline-block max-sm:w-[100%]'>
+                                            <div className='w-12 h-10 rounded-full overflow-hidden mt-2 flex'>
+                                                <img className='w-full h-full' src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png" alt="Author avatar" />
+                                            </div>
+                                            <Link to={`/user/post/${user._id}`}>
+                                                <div className='ml-5 max-sm:ml-0'>
+                                                    <p className='font-bold text-black'>{user.name}</p>
+                                                    <p className='font-semibold'>{user.email}</p>
+                                                    {/* <button className="w-full px-3 mt-3 py-1.5 w-20 pl-4 hover:bg-blue-500 bg-blue-600 border-2 rounded-lg text-white border-none">
                                                 Posts
                                             </button> */}
-                                            </div>
-                                        </Link>
-                                    </div>
-                                ))
-                            )
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    ))
+                                )
                         }
                     </div>
                 </div>

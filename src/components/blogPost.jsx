@@ -71,7 +71,7 @@ function BlogPost() {
     }
 
     function fetchComment() {
-        fetch(`https://blog-app-backend-cbu1.onrender.com/getComment/${currentId}`, {
+        fetch(`https://blog-backend-vert.vercel.app/getComment/${currentId}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${userData.user.token}`
