@@ -23,7 +23,7 @@ function Login() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        fetch("https://blog-backend-vert.vercel.app/login", {
+        fetch("https://blog-app-backend-1-xnlz.onrender.com/login", {
             method: "POST",
             body: JSON.stringify(loginData),
             headers: {
@@ -34,7 +34,7 @@ function Login() {
             .then((data) => {
                 console.log(data);
                 if (data.token != undefined) {
-                    localStorage.setItem("blog", JSON.stringify(data))
+                    localStorage.setItem("blog",JSON.stringify(data))
                     user.setUser(data)
                     navigate("/home")
                 }

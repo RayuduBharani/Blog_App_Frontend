@@ -26,7 +26,7 @@ function Home() {
   }
   function handleSubmit(event) {
     event.preventDefault();
-    fetch(`https:blog-backend-vert.vercel.app/search/${inputData.search}`, {
+    fetch(`https://blog-app-backend-1-xnlz.onrender.com/search/${inputData.search}`, {
       method: "GET",
       headers: {
         "Authorization": `Bearer ${logOut.user.token}`

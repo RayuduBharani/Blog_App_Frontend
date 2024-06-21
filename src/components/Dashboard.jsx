@@ -18,7 +18,7 @@ function Dashboard() {
 
     async function singleUser() {
         try {
-            const response = await fetch(`https://blog-backend-vert.vercel.app/singlePost/${userData.user.user_id}`, {
+            const response = await fetch(`https://blog-app-backend-1-xnlz.onrender.com/singlePost/${userData.user.user_id}`, {
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${userData.user.token}`
@@ -35,7 +35,7 @@ function Dashboard() {
 
     async function handleDelete(id) {
         try {
-            const response = await fetch(`https://blog-backend-vert.vercel.app/deletepost/${id}`, {
+            const response = await fetch(`https://blog-app-backend-1-xnlz.onrender.com/deletepost/${id}`, {
                 method: "DELETE",
                 headers: {
                     "Authorization": `Bearer ${userData.user.token}`

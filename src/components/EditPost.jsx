@@ -47,7 +47,7 @@ function EditPost() {
         fetchData();
         async function fetchData() {
             try {
-                const response = await fetch(`https://blog-backend-vert.vercel.app/singlePost/${path}`, {
+                const response = await fetch(`https://blog-app-backend-1-xnlz.onrender.com/singlePost/${path}`, {
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${userData.user.token}`
@@ -78,7 +78,7 @@ function EditPost() {
     async function handleUpdate(event) {
         event.preventDefault();
         try {
-            const response = await fetch(`https://blog-backend-vert.vercel.app/updatepost/${path}`, {
+            const response = await fetch(`https://blog-app-backend-1-xnlz.onrender.com/updatepost/${path}`, {
                 method: "PUT",
                 headers: {
                     "Authorization": `Bearer ${userData.user.token}`,

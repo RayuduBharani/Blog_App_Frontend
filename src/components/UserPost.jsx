@@ -16,7 +16,7 @@ function UserPost() {
     const [userPost, setUserPost] = useState(null)
 
     function handlePosts() {
-        fetch(`https://blog-backend-vert.vercel.app/userPost/${path}`, {
+        fetch(`https://blog-app-backend-1-xnlz.onrender.com/userPost/${path}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${userData.user.token}`

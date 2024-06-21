@@ -22,7 +22,7 @@ function BlogPost() {
 
     useEffect(() => {
 
-        fetch(`https://blog-app-backend-cbu1.onrender.com/seePost/${currentId}`, {
+        fetch(`https://blog-app-backend-1-xnlz.onrender.com/seePost/${currentId}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${userData.user.token}`
@@ -48,7 +48,7 @@ function BlogPost() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        fetch(`https://blog-app-backend-cbu1.onrender.com/addComment/${currentId}`, {
+        fetch(`https://blog-app-backend-1-xnlz.onrender.com/addComment/${currentId}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -71,7 +71,7 @@ function BlogPost() {
     }
 
     function fetchComment() {
-        fetch(`https://blog-backend-vert.vercel.app/getComment/${currentId}`, {
+        fetch(`https://blog-app-backend-1-xnlz.onrender.com/getComment/${currentId}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${userData.user.token}`

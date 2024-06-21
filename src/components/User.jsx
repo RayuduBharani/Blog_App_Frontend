@@ -22,7 +22,7 @@ function User() {
     }
 
     useEffect(() => {
-        fetch("https://blog-backend-vert.vercel.app/users", {
+        fetch("https://blog-app-backend-1-xnlz.onrender.com/users", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${UserData.user.token}`
@@ -44,7 +44,7 @@ function User() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        fetch(`https://blog-backend-vert.vercel.app/userSearch/${searchUser}`, {
+        fetch(`https://blog-app-backend-1-xnlz.onrender.com/userSearch/${searchUser}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${UserData.user.token}`
